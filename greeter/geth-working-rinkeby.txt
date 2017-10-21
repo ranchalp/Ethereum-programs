@@ -1,0 +1,468 @@
+Command on other shell: geth --datadir ~/rinkeby --rinkeby
+➜  first-contract geth attach ~/rinkeby/geth.ipc 
+geth attach ~/rinkeby/geth.ipc 
+Welcome to the Geth JavaScript console!
+
+instance: Geth/v1.7.2-stable-1db4ecdc/linux-amd64/go1.9
+coinbase: 0x2e4bf531ea8d0575bbfb2794d329a435426260b5
+at block: 0 (Wed, 12 Apr 2017 16:59:06 CEST)
+ datadir: /home/ranchal/rinkeby
+ modules: admin:1.0 clique:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 txpool:1.0 web3:1.0
+
+> eth.accounts
+eth.accounts
+
+["0x2e4bf531ea8d0575bbfb2794d329a435426260b5"]
+> eth.blockNUmber
+eth.blockNUmber
+
+undefined
+> eth.blockNumber
+eth.blockNumber
+
+0
+> eth.blockNumber
+eth.blockNumber
+
+1092828
+> eth.getBalance(eth.accounts[0])
+eth.getBalance(eth.accounts[0])
+
+2878625462100000000
+> loadScript("greeter.js")
+loadScript("greeter.js")
+
+true
+> personal.unlockAccount(eth.accounts[0])
+personal.unlockAccount(eth.accounts[0])
+
+Unlock account 0x2e4bf531ea8d0575bbfb2794d329a435426260b5
+!! Unsupported terminal, password will be echoed.
+Passphrase: test
+
+true
+> load("hello_world.js")
+load("hello_world.js")
+
+ReferenceError: 'load' is not defined
+    at <anonymous>:1:1
+
+> loadScript("hello_world.js")
+loadScript("hello_world.js")
+
+Contract1 transaction send: TransactionHash: 0x26bf670e84330939190f9c468dfa5b78d1fc04f52840ed849d78360aeefe5769 waiting to be mined...
+Contract1 transaction send: TransactionHash: 0x4c8b48510df136332c7cd2785eeb5c61e41e3848f997b9f9a46bc125b1bbadbd waiting to be mined...
+true
+> Contract1 mined! Address: 0x0b1b2f4b0b7979cc3c417130774a64af35bd0daa
+[object Object]
+Contract1 mined! Address: 0x858f969a45f23e3ecbc7144f06a386ddebe35e33
+[object Object]
+
+
+
+
+> browser_untitled_sol_greeterContract.address
+browser_untitled_sol_greeterContract.address
+
+undefined
+> browser_untitled_sol_greeterContract
+browser_untitled_sol_greeterContract
+
+{
+  abi: [{
+      constant: false,
+      inputs: [],
+      name: "kill",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: true,
+      inputs: [],
+      name: "greet",
+      outputs: [{...}],
+      payable: false,
+      stateMutability: "view",
+      type: "function"
+  }, {
+      inputs: [{...}],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "constructor"
+  }],
+  eth: {
+    accounts: ["0x2e4bf531ea8d0575bbfb2794d329a435426260b5"],
+    blockNumber: 1092841,
+    coinbase: "0x2e4bf531ea8d0575bbfb2794d329a435426260b5",
+    compile: {
+      lll: function(),
+      serpent: function(),
+      solidity: function()
+    },
+    defaultAccount: undefined,
+    defaultBlock: "latest",
+    gasPrice: 21000000000,
+    hashrate: 0,
+    mining: false,
+    pendingTransactions: [],
+    protocolVersion: "0x3f",
+    syncing: false,
+    call: function(),
+    contract: function(abi),
+    estimateGas: function(),
+    filter: function(options, callback, filterCreationErrorCallback),
+    getAccounts: function(callback),
+    getBalance: function(),
+    getBlock: function(),
+    getBlockNumber: function(callback),
+    getBlockTransactionCount: function(),
+    getBlockUncleCount: function(),
+    getCode: function(),
+    getCoinbase: function(callback),
+    getCompilers: function(),
+    getGasPrice: function(callback),
+    getHashrate: function(callback),
+    getMining: function(callback),
+    getPendingTransactions: function(callback),
+    getProtocolVersion: function(callback),
+    getRawTransaction: function(),
+    getRawTransactionFromBlock: function(),
+    getStorageAt: function(),
+    getSyncing: function(callback),
+    getTransaction: function(),
+    getTransactionCount: function(),
+    getTransactionFromBlock: function(),
+    getTransactionReceipt: function(),
+    getUncle: function(),
+    getWork: function(),
+    iban: function(iban),
+    icapNamereg: function(),
+    isSyncing: function(callback),
+    namereg: function(),
+    resend: function(),
+    sendIBANTransaction: function(),
+    sendRawTransaction: function(),
+    sendTransaction: function(),
+    sign: function(),
+    signTransaction: function(),
+    submitTransaction: function(),
+    submitWork: function()
+  },
+  at: function(address, callback),
+  getData: function(),
+  new: function()
+}
+> eth.getCode(0x858f969a45f23e3ecbc7144f06a386ddebe35e33)
+eth.getCode(0x858f969a45f23e3ecbc7144f06a386ddebe35e33)
+
+Error: invalid address
+    at web3.js:3930:15
+    at web3.js:5025:28
+    at map (<native code>)
+    at web3.js:5024:12
+    at web3.js:5050:18
+    at web3.js:5075:23
+    at <anonymous>:1:1
+
+> eth.getCode("0x858f969a45f23e3ecbc7144f06a386ddebe35e33")
+eth.getCode("0x858f969a45f23e3ecbc7144f06a386ddebe35e33")
+
+"0x60606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806341c0e1b514610051578063cfae321714610066575b600080fd5b341561005c57600080fd5b6100646100f4565b005b341561007157600080fd5b610079610185565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100b957808201518184015260208101905061009e565b50505050905090810190601f1680156100e65780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415610183576000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b565b61018d61022d565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102235780601f106101f857610100808354040283529160200191610223565b820191906000526020600020905b81548152906001019060200180831161020657829003601f168201915b5050505050905090565b6020604051908101604052806000815250905600a165627a7a72305820f3de1b9c5ca8c5a68fe81d325e45de5106da744f892306190426fcbf7d323bc80029"
+> eth.getCode("0x0b1b2f4b0b7979cc3c417130774a64af35bd0daa")
+eth.getCode("0x0b1b2f4b0b7979cc3c417130774a64af35bd0daa")
+
+"0x606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806341c0e1b5146044575b600080fd5b3415604e57600080fd5b60546056565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141560e4576000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b5600a165627a7a7230582038786419ebfaf0ece98c88b50b6e32f88f1a8f4154a51b4243d2e694d1f3d6bb0029"
+> browser_untitled_sol_greeter.greet()
+browser_untitled_sol_greeter.greet()
+
+"greeting_1"
+> browser_untitled_sol_greeter
+browser_untitled_sol_greeter
+
+{
+  abi: [{
+      constant: false,
+      inputs: [],
+      name: "kill",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: true,
+      inputs: [],
+      name: "greet",
+      outputs: [{...}],
+      payable: false,
+      stateMutability: "view",
+      type: "function"
+  }, {
+      inputs: [{...}],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "constructor"
+  }],
+  address: "0x858f969a45f23e3ecbc7144f06a386ddebe35e33",
+  transactionHash: "0x4c8b48510df136332c7cd2785eeb5c61e41e3848f997b9f9a46bc125b1bbadbd",
+  allEvents: function(),
+  greet: function(),
+  kill: function()
+}
+> browser_untitled_sol_greeter.address
+browser_untitled_sol_greeter.address
+
+"0x858f969a45f23e3ecbc7144f06a386ddebe35e33"
+> browser_untitled_sol_greeter.abi
+browser_untitled_sol_greeter.abi
+
+[{
+    constant: false,
+    inputs: [],
+    name: "kill",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function"
+}, {
+    constant: true,
+    inputs: [],
+    name: "greet",
+    outputs: [{
+        name: "",
+        type: "string"
+    }],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+}, {
+    inputs: [{
+        name: "_greeting",
+        type: "string"
+    }],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "constructor"
+}]
+> var greeter_from_others = eth.contract(browser_untitled_sol_greeter.abi).at(browser_untitled_sol_greeter.address);
+var greeter_from_others = eth.contract(browser_untitled_sol_greeter.abi).at(browser_untitled_sol_greeter.address);
+
+undefined
+> greeter_from_others
+greeter_from_others
+
+{
+  abi: [{
+      constant: false,
+      inputs: [],
+      name: "kill",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: true,
+      inputs: [],
+      name: "greet",
+      outputs: [{...}],
+      payable: false,
+      stateMutability: "view",
+      type: "function"
+  }, {
+      inputs: [{...}],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "constructor"
+  }],
+  address: "0x858f969a45f23e3ecbc7144f06a386ddebe35e33",
+  transactionHash: null,
+  allEvents: function(),
+  greet: function(),
+  kill: function()
+}
+> greeter_from_others.greet()
+greeter_from_others.greet()
+
+"greeting_1"
+> greeter_from_others.kill.sendTransaction({from:eth.accounts[0]})
+greeter_from_others.kill.sendTransaction({from:eth.accounts[0]})
+
+Error: authentication needed: password or unlock
+    at web3.js:3143:20
+    at web3.js:6347:15
+    at web3.js:5081:36
+    at web3.js:4137:16
+    at <anonymous>:1:1
+
+> personal.unlockAccount(eht.accounts[0])
+personal.unlockAccount(eht.accounts[0])
+
+ReferenceError: 'eht' is not defined
+    at <anonymous>:1:24
+
+> personal.unlockAccount(eth.accounts[0])
+personal.unlockAccount(eth.accounts[0])
+
+Unlock account 0x2e4bf531ea8d0575bbfb2794d329a435426260b5
+Passphrase: test
+
+true
+> greeter_from_others.kill.sendTransaction({from:eth.accounts[0]})
+greeter_from_others.kill.sendTransaction({from:eth.accounts[0]})
+
+"0xd47111006789129a8feb5d89ab306b72854e438749ba40bb1385e55dff08a804"
+> eth.getCode(greeter_from_others.address)
+eth.getCode(greeter_from_others.address)
+
+"0x60606040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806341c0e1b514610051578063cfae321714610066575b600080fd5b341561005c57600080fd5b6100646100f4565b005b341561007157600080fd5b610079610185565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100b957808201518184015260208101905061009e565b50505050905090810190601f1680156100e65780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415610183576000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b565b61018d61022d565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102235780601f106101f857610100808354040283529160200191610223565b820191906000526020600020905b81548152906001019060200180831161020657829003601f168201915b5050505050905090565b6020604051908101604052806000815250905600a165627a7a72305820f3de1b9c5ca8c5a68fe81d325e45de5106da744f892306190426fcbf7d323bc80029"
+> eth.accounts[0]
+eth.accounts[0]
+
+f"0x2e4bf531ea8d0575bbfb2794d329a435426260b5"
+> var greeter_from_others = eth.contract(browser_untitled_sol_greeter.abi).at("0x1a936ab8DA6Ead819Fbd6d99964E58Adb25d324a");
+var greeter_from_others = eth.contract(browser_untitled_sol_greeter.abi).at("0x1a936ab8DA6Ead819Fbd6d99964E58Adb25d324a");
+
+undefined
+> greeter_from_others.greet(()
+greeter_from_others.greet(()
+
+...   C-c C-c^Ccaught interrupt, exiting
+➜  first-contract greeter_from_others.greet()
+greeter_from_others.greet()
+function>   C-c C-c
+➜  first-contract greeter_from_others.greet
+greeter_from_others.greet
+zsh: command not found: greeter_from_others.greet
+➜  first-contract greeter_from_others.greet()
+greeter_from_others.greet()
+function> 
+
+function>   C-c C-c
+➜  first-contract greeter_from_others
+greeter_from_others
+zsh: command not found: greeter_from_others
+➜  first-contract history | grep geth]
+history | grep geth]
+➜  first-contract history | grep geth
+history | grep geth
+ 1603  geth
+ 1604  geth --light
+ 1605  geth
+ 1608  geth
+ 1621  geth
+ 1622  geth --light
+ 1633  geth -syncmode="light"
+ 1637  geth attach
+ 1640  geth --light
+ 1641  geth --attach
+ 1643  geth attach
+ 1645  geth attach
+ 1649  geth console
+ 1650* geth --testnet --datadir ~/.ethereum-testnet account new
+ 1651* geth --version
+ 1652* geth versio
+ 1653* geth verison
+ 1654* geth version
+ 1664* geth --unlock c86efffc2d6822cb3048fdb34ec10eaabd3141ce  --password akiles924
+ 1673* geth --datadir eth_private init eth_private/genesis.json
+ 1679* geth --datadir=$HOME/.rinkeby init rinkeby.json
+ 1680* geth --networkid=4 --datadir=$HOME/.rinkeby --cache=512 --ethstats="yournode:Respect my authoritah --bootnodes=enode://a24ac7c5484ef4ed0c5eb2d36620ba4e4aa13b8c84684e1b4aab0cebea2ae45cb4d375b77eab56516d34bfbd3c1a833fc51296ff084b770b94fb9028c4d25ccf@52.169.42.101:30303 --rpc --rpcapi="personal,eth,network"
+ 1681* geth --networkid=4 --datadir=$HOME/.rinkeby --cache=512 --bootnodes=enode://a24ac7c5484ef4ed0c5eb2d36620ba4e4aa13b8c84684e1b4aab0cebea2ae45cb4d375b77eab56516d34bfbd3c1a833fc51296ff084b770b94fb9028c4d25ccf@52.169.42.101:30303 --rpc --rpcapi="personal,eth,network"
+ 1682  geth attach
+ 1683  geth attach ipc://home/ranchal/.rinkeby/geth.ipc 
+ 1684* geth --rinkeby
+ 1685  geth
+ 1686  geth attach
+ 1687  geth attach --rinkeby
+ 1688  geth --rinkeby attach
+ 1689  geth attach --ipcpath "/root/.ethereum/rinkeby/geth.ipc"
+ 1690  geth attach ipc:/home/ranchal/.ethereum/rinkeby/geth.ipc 
+ 1699* geth --datadir ~/rinkeby --rinkeby --syncmode light
+ 1700  geth attach ~/rinkeby/geth.ipc
+ 1702  geth attach ~/rinkeby/geth.ipc
+ 1708  geth attach ~/rinkeby/geth.ipc
+ 1728* geth version
+ 1729* geth --datadir ~/rinkeby --rinkeby 
+ 1731  geth --datadir ~/rinkeby --rinkeby 
+ 1732  geth attach ~/rinkeby/geth.ipc
+ 1733* geth --datadir ~/rinkeby --rinkeby 
+ 1734  geth attach ~/rinkeby/geth.ipc
+ 1735* pgrep geth
+ 1736* kill $(pgrep geth(
+ 1737* kill $(pgrep geth)
+ 1738  geth attach ~/rinkeby/geth.ipc
+ 1741* ls geth
+ 1742* cd geth/chaindata/
+ 1745* geth --datadir ~/rinkeby --rinkeby 
+ 1746  geth attach ~/rinkeby/geth.ipc
+ 1754* geth --datedir ~/rinkeby --rinkeby
+ 1755* geth --datadir ~/rinkeby --rinkeby
+ 1756  geth attach ~/rinkeby/geth.ipc 
+ 1761  history | grep geth]
+➜  first-contract geth attach ~/rinkeby/geth.ipc 
+geth attach ~/rinkeby/geth.ipc 
+Welcome to the Geth JavaScript console!
+
+instance: Geth/v1.7.2-stable-1db4ecdc/linux-amd64/go1.9
+coinbase: 0x2e4bf531ea8d0575bbfb2794d329a435426260b5
+at block: 1092911 (Thu, 19 Oct 2017 18:10:03 CEST)
+ datadir: /home/ranchal/rinkeby
+ modules: admin:1.0 clique:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 txpool:1.0 web3:1.0
+
+> var greeter_from_others = eth.contract(browser_untitled_sol_greeter.abi).at("0x1a936ab8DA6Ead819Fbd6d99964E58Adb25d324a");
+var greeter_from_others = eth.contract(browser_untitled_sol_greeter.abi).at("0x1a936ab8DA6Ead819Fbd6d99964E58Adb25d324a");
+
+ReferenceError: 'browser_untitled_sol_greeter' is not defined
+    at <anonymous>:1:40
+
+> loadScript("hello_world.js")
+loadScript("hello_world.js")
+
+Error: authentication needed: password or unlock
+HERE
+Error: authentication needed: password or unlock
+HERE
+err: ReferenceError: 'greeterCompiled' is not defined
+false
+> loadScript("greeter.js")
+loadScript("greeter.js")
+
+true
+> loadScript("hello_world.js")
+loadScript("hello_world.js")
+
+Error: authentication needed: password or unlock
+HERE
+Error: authentication needed: password or unlock
+HERE
+true
+> personal.unlockAccount(eth.accounts[0])
+personal.unlockAccount(eth.accounts[0])
+
+Unlock account 0x2e4bf531ea8d0575bbfb2794d329a435426260b5
+!! Unsupported terminal, password will be echoed.
+Passphrase: test
+
+true
+> loadScript("hello_world.js")
+loadScript("hello_world.js")
+
+Contract1 transaction send: TransactionHash: 0x4cce5afb23ca4bad057ae60d1175e4012ba7c33667cb109d717b8491b3e6ff93 waiting to be mined...
+Contract1 transaction send: TransactionHash: 0x9b9071233ac0630b10c98ba5df0ecdbbfe9f580342609af273506085859c2133 waiting to be mined...
+true
+> var greeter_from_others = eth.contract(browser_untitled_sol_greeter.abi).at("0x1a936ab8DA6Ead819Fbd6d99964E58Adb25d324a");
+var greeter_from_others = eth.contract(browser_untitled_sol_greeter.abi).at("0x1a936ab8DA6Ead819Fbd6d99964E58Adb25d324a");
+
+undefined
+> greeter_from_others.greet()
+greeter_from_others.greet()
+
+"greeting_1"
+> Contract1 mined! Address: 0xe53347355cbcb4a15eb90550d1a801e6b7d01b32
+[object Object]
+Contract1 mined! Address: 0x204210e099f36d1f95fb60cbe2b9582d59df2e8f
+[object Object]
+
+
+
+
