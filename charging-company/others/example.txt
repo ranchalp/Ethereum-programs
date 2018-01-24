@@ -1,0 +1,7 @@
+var h = web3.sha3("hola");
+personal.unlockAccount(eth.accounts[0])
+var sig = web3.eth.sign(eth.accounts[0], h).slice(2)
+var r = '0x' + sig.slice(0, 64)
+var s = '0x' + sig.slice(64, 128)
+v = web3.toDecimal(parseInt("0x"+sig.slice(128,130))) // must be +27 of not 28 or 27
+var result = personal.ecRecover(h, "0x"+sig)

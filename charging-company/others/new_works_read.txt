@@ -1,0 +1,1186 @@
+➜  equchain git:(master) ✗ history | grep geth
+history | grep geth
+  856  geth
+  861  geth
+  862  geth --light
+  876  geth --rinkeby
+  890  pgrep geth
+ 1018  geth --datadir ~/rinkeby --rinkeby
+ 1020  geth attach ~/rinkeby/geth.ipc 
+ 1023  geth attach ~/rinkeby/geth.ipc 
+ 1089  geth --datadir ~/rinkeby --rinkeby
+ 1090  geth attach ~/rinkeby/geth.ipc
+ 1164  geth --datadir ~/rinkeby --rinkeby
+ 1165  first-contract geth attach ~/rinkeby/geth.ipc
+ 1166  geth attach ~/rinkeby/geth.ipc
+ 1171  geth --unlock 1
+ 1172  geth attach ~/rinkeby/geth.ipc --unlock 1
+ 1173  man geth
+ 1174  geth attach ~/rinkeby/geth.ipc -unlock 1
+ 1175  geth -unlock="1" attach ~/rinkeby/geth.ipc -unlock 1
+ 1176  geth --unlock 1 attach ~/rinkeby/geth.ipc -unlock 1
+ 1180  geth attach ~/rinkeby/geth.ipc -unlock 1
+ 1181  geth attach ~/rinkeby/geth.ipc --unlock 1
+ 1182  geth -unlock 1 attach ~/rinkeby/geth.ipc
+ 1183  geth -unlock "1" attach ~/rinkeby/geth.ipc
+ 1184  geth --unlock "1" attach ~/rinkeby/geth.ipc
+ 1185  geth --datadir ~/rinkeby --rinkeby
+ 1188  geth --datadir ~/rinkeby --rinkeby
+ 1189  geth --unlock "1" attach ~/rinkeby/geth.ipc
+ 1191  geth attach ~/rinkeby/geth.ipc
+ 1278  history | grep geth
+ 1279  geth --datadir ~/rinkeby --rinkeby
+ 1280  geth attach ~/rinkeby/geth.ipc
+ 1295  history | grep geth
+ 1296  geth attach ~/rinkeby/geth.ipc
+ 1305  history | grep geth
+ 1342  node script-geth-statechannel.js
+ 1345  node script-geth-statechannel.js
+ 1347  node script-geth-statechannel.js
+ 1351  node script-geth-statechannel.js
+ 1356  .load ./script-geth-statechannel.js
+ 1357  node script-geth-statechannel.js
+ 1365  history | grep geth
+ 1366  geth attach ~/rinkeby/geth.ipc
+ 1391  history | grep geth
+ 1392  geth attach ~/rinkeby/geth.ipc
+ 1431  history | grep geth
+ 1432  geth attach ~/rinkeby/geth.ipc
+ 1435  geth attach ~/rinkeby/geth.ipc
+ 1438  geth attach ~/rinkeby/geth.ipc
+ 1439  geth --datadir ~/rinkeby --rinkeby
+ 1440  geth attach ~/rinkeby/geth.ipc
+ 1441  $ geth --rinkeby --rpc --rpcapi db,eth,net,web3,personal --unlock="0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48"
+ 1442  geth --rinkeby --rpc --rpcapi db,eth,net,web3,personal --unlock="0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48"
+ 1443  history | grep geth
+ 1444  geth  --datadir ~/rinkeby --rinkeby --rpc --rpcapi db,eth,net,web3,personal --unlock="0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48"
+ 1460  history | grep geth
+➜  equchain git:(master) ✗ geth attach ~/rinkeby/geth.ipc
+geth attach ~/rinkeby/geth.ipc
+Welcome to the Geth JavaScript console!
+
+instance: Geth/v1.7.3-stable-4bb3c89d/linux-amd64/go1.9
+coinbase: 0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48
+at block: 1389113 (Sun, 10 Dec 2017 10:07:08 CET)
+ datadir: /home/ranchal/rinkeby
+ modules: admin:1.0 clique:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 txpool:1.0 web3:1.0
+
+> eth.accounts[0]
+eth.accounts[0]
+
+"0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48"
+> const address = '0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48';
+const address = '0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48';
+
+(anonymous): Line 1:1 Unexpected reserved word
+> quit
+quit
+
+ReferenceError: 'quit' is not defined
+    at <anonymous>:1:1
+
+> exit
+exit
+
+➜  equchain git:(master) ✗ node
+node
+[1G[0J> [3Gconst address = '0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48';
+const address = '0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48';
+undefined
+[1G[0J> [3Gconst datadir = '/home/ranchal/rinkeby';
+const datadir = '/home/ranchal/rinkeby';
+undefined
+[1G[0J> [3Gvar keyObject = keythereum.importFromFile(address, datadir);
+var keyObject = keythereum.importFromFile(address, datadir);
+ReferenceError: keythereum is not defined
+    at repl:1:17
+    at ContextifyScript.Script.runInThisContext (vm.js:50:33)
+    at REPLServer.defaultEval (repl.js:240:29)
+    at bound (domain.js:301:14)
+    at REPLServer.runBound [as eval] (domain.js:314:12)
+    at REPLServer.onLine (repl.js:441:10)
+    at emitOne (events.js:121:20)
+    at REPLServer.emit (events.js:211:7)
+    at REPLServer.Interface._onLine (readline.js:282:10)
+    at REPLServer.Interface._line (readline.js:631:8)
+[1G[0J> [3Gconst keythereum = require('keythereum');
+const keythereum = require('keythereum');
+undefined
+[1G[0J> [3Gvar keyObject = keythereum.importFromFile(address, datadir);
+var keyObject = keythereum.importFromFile(address, datadir);
+undefined
+[1G[0J> [3Gconst ethTx = require('ethereumjs-tx');
+const ethTx = require('ethereumjs-tx');
+undefined
+[1G[0J> [3Gvar privKey = keythereum.recover('test', keyObject);
+var privKey = keythereum.recover('test', keyObject);
+undefined
+[1G[0J> [3GprivKey
+privKey
+<Buffer cd 44 60 3f 3c 5d 04 80 4a 82 7a ef 38 5a 5f b5 4d 42 49 30 ef 5a 2d 4b 41 fc 00 e7 18 f8 d9 89>
+[1G[0J> [3G.exit
+.exit
+➜  equchain git:(master) ✗ geth attach ~/rinkeby/geth.ipc
+geth attach ~/rinkeby/geth.ipc
+Welcome to the Geth JavaScript console!
+
+instance: Geth/v1.7.3-stable-4bb3c89d/linux-amd64/go1.9
+coinbase: 0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48
+at block: 1389294 (Sun, 10 Dec 2017 10:52:23 CET)
+ datadir: /home/ranchal/rinkeby
+ modules: admin:1.0 clique:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 txpool:1.0 web3:1.0
+
+> eth.getBalance(eth.accounts[0])
+eth.getBalance(eth.accounts[0])
+
+2555118741631764593
+> eth.sendTransaction({from:eth.accounts[0], to:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B', value: web3.toWei(0.5, "ether"), gas:21000})
+eth.sendTransaction({from:eth.accounts[0], to:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B', value: web3.toWei(0.5, "ether"), gas:21000})
+
+Error: authentication needed: password or unlock
+    at web3.js:3143:20
+    at web3.js:6347:15
+    at web3.js:5081:36
+    at <anonymous>:1:1
+
+> personal.unlockAccount(eth.accounts[0])
+personal.unlockAccount(eth.accounts[0])
+
+Unlock account 0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48
+!! Unsupported terminal, password will be echoed.
+Passphrase: test
+
+true
+> eth.sendTransaction({from:eth.accounts[0], to:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B', value: web3.toWei(0.5, "ether"), gas:21000})
+eth.sendTransaction({from:eth.accounts[0], to:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B', value: web3.toWei(0.5, "ether"), gas:21000})
+
+"0xce1722f79ad0056a7aa32996f70a92c63eb872b41be4926fd48bf59f89dcb7bb"
+> eth.sendTransaction({from:eth.accounts[0], to:'0x107C9C8450D6AfB3D30e726B1c0A78950Ef16fed', value: web3.toWei(0.5, "ether"), gas:21000})
+eth.sendTransaction({from:eth.accounts[0], to:'0x107C9C8450D6AfB3D30e726B1c0A78950Ef16fed', value: web3.toWei(0.5, "ether"), gas:21000})
+
+"0xea53dffb718385927a6dea29e06cd5b82e80af8b262b5903f9e3dc847d5ff895"
+> abi = [{"constant":false,"inputs":[{"name":"seller","type":"address"},{"name":"emus","type":"uint256"}],"name":"buyEmus","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"getName","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"kill","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"company","type":"address"},{"name":"addedEmus","type":"uint256"}],"name":"updateEmus","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getFine","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getEmusOnSale","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"payFine","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"company","type":"address"}],"name":"timestamp","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"emusToRemove","type":"uint256"}],"name":"removeEmusFromSale","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getEmuLimit","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getEmus","outputs":[{"name":"","type":"int256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"newRegulator","type":"address"}],"name":"addRegulator","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"company","type":"address"},{"name":"fine","type":"uint256"}],"name":"putFine","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"company","type":"address"},{"name":"name","type":"string"},{"name":"emuLimit","type":"uint256"}],"name":"addCompany","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"emusToSale","type":"uint256"}],"name":"putEmusOnSale","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]
+abi = [{"constant":false,"inputs":[{"name":"seller","type":"address"},{"name":"emus","type":"uint256"}],"name":"buyEmus","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"getName","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"kill","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"company","type":"address"},{"name":"addedEmus","type":"uint256"}],"name":"updateEmus","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getFine","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getEmusOnSale","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"payFine","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"company","type":"address"}],"name":"timestamp","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"emusToRemove","type":"uint256"}],"name":"removeEmusFromSale","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getEmuLimit","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getEmus","outputs":[{"name":"","type":"int256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"newRegulator","type":"address"}],"name":"addRegulator","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"company","type":"address"},{"name":"fine","type":"uint256"}],"name":"putFine","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"company","type":"address"},{"name":"name","type":"string"},{"name":"emuLimit","type":"uint256"}],"name":"addCompany","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"emusToSale","type":"uint256"}],"name":"putEmusOnSale","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"}]
+
+[{
+    constant: false,
+    inputs: [{
+        name: "seller",
+        type: "address"
+    }, {
+        name: "emus",
+        type: "uint256"
+    }],
+    name: "buyEmus",
+    outputs: [],
+    payable: true,
+    stateMutability: "payable",
+    type: "function"
+}, {
+    constant: true,
+    inputs: [],
+    name: "getName",
+    outputs: [{
+        name: "",
+        type: "string"
+    }],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+}, {
+    constant: false,
+    inputs: [],
+    name: "kill",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function"
+}, {
+    constant: false,
+    inputs: [{
+        name: "company",
+        type: "address"
+    }, {
+        name: "addedEmus",
+        type: "uint256"
+    }],
+    name: "updateEmus",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function"
+}, {
+    constant: true,
+    inputs: [],
+    name: "getFine",
+    outputs: [{
+        name: "",
+        type: "uint256"
+    }],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+}, {
+    constant: true,
+    inputs: [],
+    name: "getEmusOnSale",
+    outputs: [{
+        name: "",
+        type: "uint256"
+    }],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+}, {
+    constant: false,
+    inputs: [],
+    name: "payFine",
+    outputs: [],
+    payable: true,
+    stateMutability: "payable",
+    type: "function"
+}, {
+    constant: false,
+    inputs: [{
+        name: "company",
+        type: "address"
+    }],
+    name: "timestamp",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function"
+}, {
+    constant: false,
+    inputs: [{
+        name: "emusToRemove",
+        type: "uint256"
+    }],
+    name: "removeEmusFromSale",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function"
+}, {
+    constant: true,
+    inputs: [],
+    name: "getEmuLimit",
+    outputs: [{
+        name: "",
+        type: "uint256"
+    }],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+}, {
+    constant: true,
+    inputs: [],
+    name: "getEmus",
+    outputs: [{
+        name: "",
+        type: "int256"
+    }],
+    payable: false,
+    stateMutability: "view",
+    type: "function"
+}, {
+    constant: false,
+    inputs: [{
+        name: "newRegulator",
+        type: "address"
+    }],
+    name: "addRegulator",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function"
+}, {
+    constant: false,
+    inputs: [{
+        name: "company",
+        type: "address"
+    }, {
+        name: "fine",
+        type: "uint256"
+    }],
+    name: "putFine",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function"
+}, {
+    constant: false,
+    inputs: [{
+        name: "company",
+        type: "address"
+    }, {
+        name: "name",
+        type: "string"
+    }, {
+        name: "emuLimit",
+        type: "uint256"
+    }],
+    name: "addCompany",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function"
+}, {
+    constant: false,
+    inputs: [{
+        name: "emusToSale",
+        type: "uint256"
+    }],
+    name: "putEmusOnSale",
+    outputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "function"
+}, {
+    inputs: [],
+    payable: false,
+    stateMutability: "nonpayable",
+    type: "constructor"
+}]
+> var contract = eth.contract(abi).at('0xddb28100e322cb3a0eb04ba5b2ba6c6a37267504')
+var contract = eth.contract(abi).at('0x7a87d8087f5807242a1b6675134e6a0a2e7ae09f')
+
+undefined
+> contract
+contract
+
+{
+  abi: [{
+      constant: false,
+      inputs: [{...}, {...}],
+      name: "buyEmus",
+      outputs: [],
+      payable: true,
+      stateMutability: "payable",
+      type: "function"
+  }, {
+      constant: true,
+      inputs: [],
+      name: "getName",
+      outputs: [{...}],
+      payable: false,
+      stateMutability: "view",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [],
+      name: "kill",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [{...}, {...}],
+      name: "updateEmus",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: true,
+      inputs: [],
+      name: "getFine",
+      outputs: [{...}],
+      payable: false,
+      stateMutability: "view",
+      type: "function"
+  }, {
+      constant: true,
+      inputs: [],
+      name: "getEmusOnSale",
+      outputs: [{...}],
+      payable: false,
+      stateMutability: "view",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [],
+      name: "payFine",
+      outputs: [],
+      payable: true,
+      stateMutability: "payable",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [{...}],
+      name: "timestamp",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [{...}],
+      name: "removeEmusFromSale",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: true,
+      inputs: [],
+      name: "getEmuLimit",
+      outputs: [{...}],
+      payable: false,
+      stateMutability: "view",
+      type: "function"
+  }, {
+      constant: true,
+      inputs: [],
+      name: "getEmus",
+      outputs: [{...}],
+      payable: false,
+      stateMutability: "view",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [{...}],
+      name: "addRegulator",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [{...}, {...}],
+      name: "putFine",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [{...}, {...}, {...}],
+      name: "addCompany",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [{...}],
+      name: "putEmusOnSale",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      inputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "constructor"
+  }],
+  address: "0x7a87d8087f5807242a1b6675134e6a0a2e7ae09f",
+  transactionHash: null,
+  addCompany: function(),
+  addRegulator: function(),
+  allEvents: function(),
+  buyEmus: function(),
+  getEmuLimit: function(),
+  getEmus: function(),
+  getEmusOnSale: function(),
+  getFine: function(),
+  getName: function(),
+  kill: function(),
+  payFine: function(),
+  putEmusOnSale: function(),
+  putFine: function(),
+  removeEmusFromSale: function(),
+  timestamp: function(),
+  updateEmus: function()
+}
+> contract.getEmusOnSale()
+contract.getEmusOnSale()
+
+0
+> contract.addCompany('0x107C9C8450D6AfB3D30e726B1c0A78950Ef16fed','Company2',1000)
+contract.addCompany('0x107C9C8450D6AfB3D30e726B1c0A78950Ef16fed','Company2',1000)
+
+Error: invalid address
+    at web3.js:3930:15
+    at web3.js:3756:20
+    at web3.js:5025:28
+    at map (<native code>)
+    at web3.js:5024:12
+    at web3.js:5050:18
+    at web3.js:5075:23
+    at web3.js:4137:16
+    at apply (<native code>)
+    at web3.js:4223:16
+
+> contract.addCompany(eth.accounts[0],'Company2',1000)
+contract.addCompany(eth.accounts[0],'Company2',1000)
+
+Error: invalid address
+    at web3.js:3930:15
+    at web3.js:3756:20
+    at web3.js:5025:28
+    at map (<native code>)
+    at web3.js:5024:12
+    at web3.js:5050:18
+    at web3.js:5075:23
+    at web3.js:4137:16
+    at apply (<native code>)
+    at web3.js:4223:16
+
+> contract.getEmus
+contract.getEmus
+
+function()
+> contract.getEmus()
+contract.getEmus()
+
+0
+> contract.addCompany(eth.accounts[0],'Company2',1000,{from: eth.accounts[0]})
+contract.addCompany(eth.accounts[0],'Company2',1000,{from: eth.accounts[0]})
+
+Error: authentication needed: password or unlock
+    at web3.js:3143:20
+    at web3.js:6347:15
+    at web3.js:5081:36
+    at web3.js:4137:16
+    at apply (<native code>)
+    at web3.js:4223:16
+    at <anonymous>:1:1
+
+> personal.unlockAccount[0]
+personal.unlockAccount[0]
+
+undefined
+> personal.unlockAccount(eth.accounts[0])
+personal.unlockAccount(eth.accounts[0])
+
+Unlock account 0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48
+Passphrase: test
+
+true
+> contract.addCompany(eth.accounts[0],'Company2',1000,{from: eth.accounts[0]})
+contract.addCompany(eth.accounts[0],'Company2',1000,{from: eth.accounts[0]})
+
+"0x9d06a6a884b8de4ce437ba2e020e4078319519731e5459a6b9b5d84d25abbee4"
+> contract.addCompany('0x107C9C8450D6AfB3D30e726B1c0A78950Ef16fed','Company_buyer',200,{from: eth.accounts[0]})
+contract.addCompany('0x107C9C8450D6AfB3D30e726B1c0A78950Ef16fed','Company_buyer',200,{from: eth.accounts[0]})
+
+"0xa07c3760190abae3946b5083a1a67c0deeb788ab2628aeb1b2c39ded597938a8"
+> contract.addCompany('0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B','Company_buyer',20000,{from: eth.accounts[0]})
+contract.addCompany('0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B','Company_buyer',20000,{from: eth.accounts[0]})
+
+"0xadcdbc606eff08f03fb6ca6cb22095b6822198b162f0b81ba1ce7b9df7fa45d8"
+> eth.accounts
+eth.accounts
+
+["0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48", "0x107c9c8450d6afb3d30e726b1c0a78950ef16fed", "0x8bed65bb7eaefc1db49702e7f457442a3613400b"]
+> var company_seller = "0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B"
+var company_seller = "0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B"
+
+undefined
+> var company_buyer = eth.accounts[1]
+var company_buyer = eth.accounts[1]
+
+undefined
+> var creator = eth.accounts[0]
+var creator = eth.accounts[0]
+
+undefined
+> company_buyer
+company_buyer
+
+"0x107c9c8450d6afb3d30e726b1c0a78950ef16fed"
+> contract.getEmusOnSale({from: company_buyer})
+contract.getEmusOnSale({from: company_buyer})
+
+0
+> contract.getEmus({from: company_buyer})
+contract.getEmus({from: company_buyer})
+
+0
+> contract.getEmus({from: company_seller})
+contract.getEmus({from: company_seller})
+
+0
+> contract.getEmusOnSale({from: company_seller})
+contract.getEmusOnSale({from: company_seller})
+
+0
+> contract.getEmusOnSale({from: company_buyer})
+contract.getEmusOnSale({from: company_buyer})
+
+0
+> contract.addCompany('0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B','Company_seller',20000,{from: eth.accounts[0]})
+contract.addCompany('0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B','Company_seller',20000,{from: eth.accounts[0]})
+
+Error: authentication needed: password or unlock
+    at web3.js:3143:20
+    at web3.js:6347:15
+    at web3.js:5081:36
+    at web3.js:4137:16
+    at apply (<native code>)
+    at web3.js:4223:16
+    at <anonymous>:1:1
+
+> personal.unlockAccount(eth.accounts[0])
+personal.unlockAccount(eth.accounts[0])
+
+Unlock account 0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48
+Passphrase: test
+
+true
+> contract.addCompany('0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B','Company_seller',20000,{from: eth.accounts[0]})
+contract.addCompany('0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B','Company_seller',20000,{from: eth.accounts[0]})
+
+"0x8323b4a58457b0149fd6400e660db129afee29a9c5ebc507c47475a8dffb945a"
+> contract.getEmus({from:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B')})
+contract.getEmus({from:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B')})
+
+(anonymous): Line 1:69 Unexpected token } (and 3 more errors)
+> contract.getEmus({from:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B'})
+contract.getEmus({from:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B'})
+
+0
+> contract.getEmuLimit({from:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B'})
+contract.getEmuLimit({from:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B'})
+
+20000
+> contract.putEmusOnSale(200, {from:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B'})
+contract.putEmusOnSale(200, {from:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B'})
+
+Error: authentication needed: password or unlock
+    at web3.js:3143:20
+    at web3.js:6347:15
+    at web3.js:5081:36
+    at web3.js:4137:16
+    at apply (<native code>)
+    at web3.js:4223:16
+    at <anonymous>:1:1
+
+> personal.unlockAccount('0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B')
+personal.unlockAccount('0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B')
+
+Unlock account 0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B
+Passphrase: testtest
+
+true
+> contract.putEmusOnSale(200, {from:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B'})
+contract.putEmusOnSale(200, {from:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B'})
+
+"0x7c665661fc95e5d60d7ca8f97ebd4662b9f3af94ed3585a08ca2710581267504"
+> contract.getEmusOnSale({from:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B'})
+contract.getEmusOnSale({from:'0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B'})
+
+200
+> var seller = '0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B'
+var seller = '0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B'
+
+undefined
+> var buyer = '0x107C9C8450D6AfB3D30e726B1c0A78950Ef16fed'
+var buyer = '0x107C9C8450D6AfB3D30e726B1c0A78950Ef16fed'
+
+undefined
+> contract.buyEmus(seller,100,{from:buyer,value:100})
+contract.buyEmus(seller,100,{from:buyer,value:100})
+
+Error: authentication needed: password or unlock
+    at web3.js:3143:20
+    at web3.js:6347:15
+    at web3.js:5081:36
+    at web3.js:4137:16
+    at apply (<native code>)
+    at web3.js:4223:16
+    at <anonymous>:1:1
+
+> seller
+seller
+
+"0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B"
+> contract.getEmuLimit(seller)
+contract.getEmuLimit(seller)
+
+Error: invalid argument 1: hex number > 64 bits
+    at web3.js:3143:20
+    at web3.js:6347:15
+    at web3.js:5081:36
+    at web3.js:4102:22
+    at apply (<native code>)
+    at web3.js:4227:12
+    at <anonymous>:1:1
+
+> contract.getEmuLimit({from:seller})
+contract.getEmuLimit({from:seller})
+
+20000
+> contract.getEmus({from:seller})
+contract.getEmus({from:seller})
+
+200
+> var contract = eth.contract(abi).at('0xddb28100e322cb3a0eb04ba5b2ba6c6a37267504')
+var contract = eth.contract(abi).at('0xddb28100e322cb3a0eb04ba5b2ba6c6a37267504')
+
+undefined
+> contract.addCompany('0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B','Company_seller',20000,{from: eth.accounts[0]})
+contract.addCompany('0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B','Company_seller',20000,{from: eth.accounts[0]})
+
+Error: authentication needed: password or unlock
+    at web3.js:3143:20
+    at web3.js:6347:15
+    at web3.js:5081:36
+    at web3.js:4137:16
+    at apply (<native code>)
+    at web3.js:4223:16
+    at <anonymous>:1:1
+
+> personal.unlockAccount(eth.accounts[0])
+personal.unlockAccount(eth.accounts[0])
+
+Unlock account 0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48
+Passphrase: test
+
+contract.addCompany('0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B','Company_seller',20000,{from: eth.accounts[0]})
+contract.addCompany('0x8BeD65Bb7EAEfc1Db49702e7F457442a3613400B','Company_seller',20000,{from: eth.accounts[0]})
+
+"0x6d13e95e14ae5c3b26698e8688ca8f67b8b078a7c9d796a94221239480031ab6"
+> buyer
+buyer
+
+"0x107C9C8450D6AfB3D30e726B1c0A78950Ef16fed"
+> contract.addCompany(buyer,'Company_buyer',200,{from: eth.accounts[0]})
+contract.addCompany(buyer,'Company_buyer',200,{from: eth.accounts[0]})
+
+"0xfe962610ec75540af6ab526af300557fd36c788e0fc1ed43f4f08730532c0af2"
+> "0xfe962610ec75540af6ab526af300557fd36c788e0fc1ed43f4f08730532c0af2"
+> 
+"0xfe962610ec75540af6ab526af300557fd36c788e0fc1ed43f4f08730532c0af2"
+> 
+
+"0xfe962610ec75540af6ab526af300557fd36c788e0fc1ed43f4f08730532c0af2"
+> 
+(anonymous): Line 1:1 Unexpected token >
+> ls
+ls
+
+ReferenceError: 'ls' is not defined
+    at <anonymous>:1:1
+
+> ecrecover
+ecrecover
+
+ReferenceError: 'ecrecover' is not defined
+    at <anonymous>:1:1
+
+> personal.ecrecover
+personal.ecrecover
+
+undefined
+> personal
+personal
+
+{
+  listAccounts: ["0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48", "0x107c9c8450d6afb3d30e726b1c0a78950ef16fed", "0x8bed65bb7eaefc1db49702e7f457442a3613400b"],
+  listWallets: [{
+      accounts: [{...}],
+      status: "Locked",
+      url: "keystore:///home/ranchal/rinkeby/keystore/UTC--2017-11-26T11-58-55.866203734Z--45a6b16e1abd4e3786d39eb11214ba1fe57c5f48"
+  }, {
+      accounts: [{...}],
+      status: "Locked",
+      url: "keystore:///home/ranchal/rinkeby/keystore/UTC--2017-12-10T10-23-05.511958276Z--107c9c8450d6afb3d30e726b1c0a78950ef16fed"
+  }, {
+      accounts: [{...}],
+      status: "Locked",
+      url: "keystore:///home/ranchal/rinkeby/keystore/UTC--2017-12-10T10-23-13.796741969Z--8bed65bb7eaefc1db49702e7f457442a3613400b"
+  }],
+  deriveAccount: function(),
+  ecRecover: function(),
+  getListAccounts: function(callback),
+  getListWallets: function(callback),
+  importRawKey: function(),
+  lockAccount: function(),
+  newAccount: function github.com/ethereum/go-ethereum/console.(*bridge).NewAccount-fm(),
+  openWallet: function github.com/ethereum/go-ethereum/console.(*bridge).OpenWallet-fm(),
+  sendTransaction: function(),
+  sign: function github.com/ethereum/go-ethereum/console.(*bridge).Sign-fm(),
+  unlockAccount: function github.com/ethereum/go-ethereum/console.(*bridge).UnlockAccount-fm()
+}
+> personal.ecRecover
+personal.ecRecover
+
+function()
+> var result = web3.eth.sign("0x135a7de83802408321b74c322f8558db1679ac20","0x9dd2c369a187b4e6b9c402f030e50743e619301ea62aa4c0737d4ef7e10a3d49"); // second argument is web3.sha3("xyz")
+var result = web3.eth.sign("0x135a7de83802408321b74c322f8558db1679ac20","0x9dd2c369a187b4e6b9c402f030e50743e619301ea62aa4c0737d4ef7e10a3d49"); // second argument is web3.sha3("xyz")
+
+Error: unknown account
+    at web3.js:3143:20
+    at web3.js:6347:15
+    at web3.js:5081:36
+    at <anonymous>:1:14
+
+> var result = web3.eth.sign(eth.accounts[0],"0x9dd2c369a187b4e6b9c402f030e50743e619301ea62aa4c0737d4ef7e10a3d49"); // second argument is web3.sha3("xyz")
+var result = web3.eth.sign(eth.accounts[0],"0x9dd2c369a187b4e6b9c402f030e50743e619301ea62aa4c0737d4ef7e10a3d49"); // second argument is web3.sha3("xyz")
+
+Error: authentication needed: password or unlock
+    at web3.js:3143:20
+    at web3.js:6347:15
+    at web3.js:5081:36
+    at <anonymous>:1:14
+
+> personal.unlockAccount(eth.accounts[0])
+personal.unlockAccount(eth.accounts[0])
+
+Unlock account 0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48
+Passphrase: test
+
+true
+> var result = web3.eth.sign(eth.accounts[0],"0x9dd2c369a187b4e6b9c402f030e50743e619301ea62aa4c0737d4ef7e10a3d49"); // second argument is web3.sha3("xyz")
+var result = web3.eth.sign(eth.accounts[0],"0x9dd2c369a187b4e6b9c402f030e50743e619301ea62aa4c0737d4ef7e10a3d49"); // second argument is web3.sha3("xyz")
+
+undefined
+> web3.eth.personal.ecRecover(result, "0x9dd2c369a187b4e6b9c402f030e50743e619301ea62aa4c0737d4ef7e10a3d49")
+web3.eth.personal.ecRecover(result, "0x9dd2c369a187b4e6b9c402f030e50743e619301ea62aa4c0737d4ef7e10a3d49")
+
+TypeError: Cannot access member 'ecRecover' of undefined
+    at <anonymous>:1:1
+
+> personal.ecRecover(result, "0x9dd2c369a187b4e6b9c402f030e50743e619301ea62aa4c0737d4ef7e10a3d49")
+personal.
+ecRecover(result, "0x9dd2c369a187b4e6b9c402f030e50743e619301ea62aa4c0737d4ef7e10a3d49")
+
+Error: signature must be 65 bytes long
+    at web3.js:3143:20
+    at web3.js:6347:15
+    at web3.js:5081:36
+    at <anonymous>:1:1
+
+> result
+result
+
+"0xfcf3b2e523ea1be2a1826436c5cb421c5a8d4b62b77afe402a2343b9c4eee57b3eacd9f5570020221333640527213b3f785cb97d2a0875d2e2dbbdcb95f79cd11b"
+>     var h = web3.sha3("hola")
+    var h = web3.sha3("hola")
+
+undefined
+>     var sig = web3.eth.sign(eth.accounts[0], h).slice(2)
+    var sig = web3.eth.sign(eth.accounts[0], h).slice(2)
+
+Error: authentication needed: password or unlock
+    at web3.js:3143:20
+    at web3.js:6347:15
+    at web3.js:5081:36
+    at <anonymous>:1:15
+
+> personal.unlockAccount(eth.accounts[0])
+personal.unlockAccount(eth.accounts[0])
+
+Unlock account 0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48
+Passphrase: test
+
+true
+>     var sig = web3.eth.sign(eth.accounts[0], h).slice(2)
+    var sig = web3.eth.sign(eth.accounts[0], h).slice(2)
+
+undefined
+>     var r = `0x${sig.slice(0, 64)}`
+    var r = `0x${sig.slice(0, 64)}`
+
+(anonymous): Line 1:13 Unexpected token ILLEGAL (and 3 more errors)
+> sig.slice(0,64)
+sig.slice(0,64)
+
+"a0d6ad4d777322b59628ba71b12b12098916d36351e8db4739581b915c082f02"
+>     var r = '0x${sig.slice(0, 64)}'
+    var r = '0x${sig.slice(0, 64)}'
+
+undefined
+> r
+r
+
+"0x${sig.slice(0, 64)}"
+>     var r = "0x${sig.slice(0, 64)}"
+    var r = "0x${sig.slice(0, 64)}"
+
+undefined
+> r
+r
+
+"0x${sig.slice(0, 64)}"
+> var r = '0x'+sig.slice(0, 64)
+var r = '0x'+sig.slice(0, 64)
+
+undefined
+> r
+r
+
+"0xa0d6ad4d777322b59628ba71b12b12098916d36351e8db4739581b915c082f02"
+> var s = '0x' + 'sig.slice(64, 128)'
+var s = '0x' + 'sig.slice(64, 128)'
+
+undefined
+> var v = web3.toDecimal(sig.slice(128, 130)) + 27
+var v = web3.toDecimal(sig.slice(128, 130)) + 27
+
+Error: new BigNumber() not a number: 1b
+    at L (bignumber.js:3:2876)
+    at bignumber.js:3:8435
+    at a (bignumber.js:3:796)
+    at a (bignumber.js:3:228)
+    at web3.js:2212:16
+    at web3.js:2072:12
+    at <anonymous>:1:9
+
+> contract
+contract
+
+{
+  abi: [{
+      constant: false,
+      inputs: [{...}, {...}],
+      name: "buyEmus",
+      outputs: [],
+      payable: true,
+      stateMutability: "payable",
+      type: "function"
+  }, {
+      constant: true,
+      inputs: [],
+      name: "getName",
+      outputs: [{...}],
+      payable: false,
+      stateMutability: "view",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [],
+      name: "kill",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [{...}, {...}],
+      name: "updateEmus",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: true,
+      inputs: [],
+      name: "getFine",
+      outputs: [{...}],
+      payable: false,
+      stateMutability: "view",
+      type: "function"
+  }, {
+      constant: true,
+      inputs: [],
+      name: "getEmusOnSale",
+      outputs: [{...}],
+      payable: false,
+      stateMutability: "view",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [],
+      name: "payFine",
+      outputs: [],
+      payable: true,
+      stateMutability: "payable",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [{...}],
+      name: "timestamp",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [{...}],
+      name: "removeEmusFromSale",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: true,
+      inputs: [],
+      name: "getEmuLimit",
+      outputs: [{...}],
+      payable: false,
+      stateMutability: "view",
+      type: "function"
+  }, {
+      constant: true,
+      inputs: [],
+      name: "getEmus",
+      outputs: [{...}],
+      payable: false,
+      stateMutability: "view",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [{...}],
+      name: "addRegulator",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [{...}, {...}],
+      name: "putFine",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [{...}, {...}, {...}],
+      name: "addCompany",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      constant: false,
+      inputs: [{...}],
+      name: "putEmusOnSale",
+      outputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "function"
+  }, {
+      inputs: [],
+      payable: false,
+      stateMutability: "nonpayable",
+      type: "constructor"
+  }],
+  address: "0xddb28100e322cb3a0eb04ba5b2ba6c6a37267504",
+  transactionHash: null,
+  addCompany: function(),
+  addRegulator: function(),
+  allEvents: function(),
+  buyEmus: function(),
+  getEmuLimit: function(),
+  getEmus: function(),
+  getEmusOnSale: function(),
+  getFine: function(),
+  getName: function(),
+  kill: function(),
+  payFine: function(),
+  putEmusOnSale: function(),
+  putFine: function(),
+  removeEmusFromSale: function(),
+  timestamp: function(),
+  updateEmus: function()
+}
+> contract.getName(eth.accounts[0])
+contract.getName(eth.accounts[0])
+
+Error: invalid argument 1: hex number > 64 bits
+    at web3.js:3143:20
+    at web3.js:6347:15
+    at web3.js:5081:36
+    at web3.js:4102:22
+    at apply (<native code>)
+    at web3.js:4227:12
+    at <anonymous>:1:1
+
+> contract.getName({from:eth.accounts[0]})
+contract.getName({from:eth.accounts[0]})
+
+"testcompany"
+> var v = web3.toDecimal(sig.slice(128, 130)) + 27
+var v = web3.toDecimal(sig.slice(128, 130)) + 27
+
+Error: new BigNumber() not a number: 1b
+    at L (bignumber.js:3:2876)
+    at bignumber.js:3:8435
+    at a (bignumber.js:3:796)
+    at a (bignumber.js:3:228)
+    at web3.js:2212:16
+    at web3.js:2072:12
+    at <anonymous>:1:9
+
+> web3.toDecimal(sig.slice(128,130))
+web3.toDecimal(sig.slice(128,130))
+
+Error: new BigNumber() not a number: 1b
+    at L (bignumber.js:3:2876)
+    at bignumber.js:3:8435
+    at a (bignumber.js:3:796)
+    at a (bignumber.js:3:228)
+    at web3.js:2212:16
+    at web3.js:2072:12
+    at <anonymous>:1:1
+
+> sig.slice(128,130)
+sig.slice(128,130)
+
+"1b"
+> web3.toDecimal(parseInt(sig.slice(128,130)))
+web3.toDecimal(parseInt(sig.slice(128,130)))
+
+1
+> web3.toDecimal(parseInt("11")))
+web3.toDecimal(parseInt("11")))
+
+(anonymous): Line 1:31 Unexpected token )
+> web3.toDecimal(parseInt("11"))
+web3.toDecimal(parseInt("11"))
+
+11
+> web3.toDecimal(parseInt("0x"+sig.slice(128,130)))
+web3.toDecimal(parseInt("0x"+sig.slice(128,130)))
+
+27
+> web3.toDecimal(parseInt("0x"+sig.slice(128,130)))+27
+web3.toDecimal(parseInt("0x"+sig.slice(128,130)))+27
+
+54
+> v = web3.toDecimal(parseInt("0x"+sig.slice(128,130)))
+v = web3.toDecimal(parseInt("0x"+sig.slice(128,130)))
+
+27
+>var result = ecRecover(h, sig)
+var result = ecRecover(h, sig)
+
+ReferenceError: 'ecRecover' is not defined
+    at <anonymous>:1:14
+
+> var result = personal.ecRecover(h, sig)
+var result = personal.ecRecover(h, sig)
+
+Error: invalid argument 1: json: cannot unmarshal hex string without 0x prefix into Go value of type hexutil.Bytes
+    at web3.js:3143:20
+    at web3.js:6347:15
+    at web3.js:5081:36
+    at <anonymous>:1:14
+
+> h
+h
+
+"0x8aca9664752dbae36135fd0956c956fc4a370feeac67485b49bcd4b99608ae41"
+> sig
+sig
+
+"a0d6ad4d777322b59628ba71b12b12098916d36351e8db4739581b915c082f0203918c121ee425f1db3fee42cdc20a29c75236b97832b2218549529b294159171b"
+> var result = personal.ecRecover(h, "0x"+sig)
+var result = personal.ecRecover(h, "0x"+sig)
+
+undefined
+> result
+result
+
+"0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48"
+> eth.accounts[0]
+eth.accounts[0]
+
+"0x45a6b16e1abd4e3786d39eb11214ba1fe57c5f48"
+> READ: https://ethereum.stackexchange.com/questions/1777/workflow-on-signing-a-string-with-private-key-followed-by-signature-verificatio/1794#1794 AND ALSO https://web3js.readthedocs.io/en/1.0/web3-eth-personal.html AND https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethsendrawtransaction
