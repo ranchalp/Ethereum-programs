@@ -116,7 +116,7 @@ contract ChargingCompany is Mortal {
   modifier checkTimestampEmpty(address user){
     require(users[user].charge.chargingTimeout==0);
     _;
-  }
+  }  
 
   function openChannel (uint tokenAmount,address station) public
     checkTimestampEmpty(msg.sender)
@@ -185,8 +185,8 @@ contract ChargingCompany is Mortal {
     checkTimestamp(timestamp)
     verify_hash(tokenAmount,timestamp,hash)
   {
-    users[user].charge.hash = hash;//todo maybe without 'prefix'
-    users[user].charge.tokenAmount = tokenAmount;//todo maybe without 'prefix'
+    users[user].charge.hash = hash;
+    users[user].charge.tokenAmount = tokenAmount;
   }
 
   modifier isCommitted(address user){
@@ -204,7 +204,7 @@ contract ChargingCompany is Mortal {
     _;
   }
     
-  function finishLate (address user) public
+  function closeChannelLate (address user) public
     timestampLate(user){//only when runout of time
     users[user].own_tokens+=users[user].charge.tokens;//give evth back to user
     
@@ -215,12 +215,12 @@ contract ChargingCompany is Mortal {
     users[user].charge.committed=false;
   }
   
-  function finishCharge (address user,uint8 v, bytes32 r, bytes32 s) //after calling commitToClose
+  function closeChannel (address user,uint8 v, bytes32 r, bytes32 s) //after calling commitToClose
     public
     checkTimestamp(users[user].charge.chargingTimeout)
     isCommitted(user)
     verify_address(users[user].charge.hash,user,v,r,s)
-  /* isStation(msg.sender)//must be station */ //well not really necessary, can also be user
+    isStation(msg.sender)//must be station // adding penalties and another timeout not really necessary, could also be user
   {
     users[user].own_tokens+=users[user].charge.tokens-users[user].charge.tokenAmount;
     users[user].spent_tokens+=users[user].charge.tokenAmount;// just to keep track, for testing
@@ -268,9 +268,9 @@ contract ChargingCompany is Mortal {
   
 }
 
-  // The function commitToClose and finishCharge must be decoupled because of the following error: 
-  //chargingCompanyRawTx.sol:238:54: Compiler error: Stack too deep, try removing local variables.
-  /*   function finishCharge (address user,uint tokenAmount, uint timestamp,bytes32 hash,uint8 v, bytes32 r, bytes32 s)  */
+  // The function commitToClose and closeChannel must be decoupled because of the following error: 
+  //chargingCompanyStateChannel.sol:238:54: Compiler error: Stack too deep, try removing local variables.
+  /*   function closeChannel (address user,uint tokenAmount, uint timestamp,bytes32 hash,uint8 v, bytes32 r, bytes32 s)  */
   /*   //address user and station to be removed if msg.sender and tx.origin as thought */
   /*   public */
   /*  enoughTokens(users[msg.sender].charge.tokens,tokenAmount) */

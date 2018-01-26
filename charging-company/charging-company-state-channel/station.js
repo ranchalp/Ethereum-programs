@@ -7,9 +7,9 @@ let stateChannel = require('./state_channel.js');
 let Web3 = require('web3'); // https://www.npmjs.com/package/web3
 let web3 = new Web3();
 web3.setProvider(new web3.providers.HttpProvider('http://localhost:8545'));
-let source = fs.readFileSync("chargingCompanyRawTx.json");
+let source = fs.readFileSync("chargingCompanyStateChannel.json");
 let contracts = JSON.parse(source)["contracts"];
-var chargingContract = 'chargingCompanyRawTx.sol:ChargingCompany';
+var chargingContract = 'chargingCompanyStateChannel.sol:ChargingCompany';
 // ABI description as JSON structure
 let abi = JSON.parse(contracts[chargingContract].abi);
 let contractAddress = constants.contractAddress// obtain from deployment
@@ -54,7 +54,7 @@ net.createServer(function (socket) {
 	    // 	if(event.txhash == dataJson.txhash &&
 	    // 	   event.returnValues.user == dataJson.address &&
 	    // 	   event.returnValues.station == constants.station1
-	    // 	  ){//we assume no double-spending attack, no need to wait 6 confirmations (to-do)
+	    // 	  ){
 	    //TODO FOR THE MOMENT WE ASSUME THIS WORKS AS EVENTS NOT SUPPORTED WITH WEB3.JS YET
 	    userAddress= dataJson.address;
 	    date = new Date();
@@ -90,9 +90,6 @@ net.createServer(function (socket) {
 	case constants.END:// fuelPrice
 	    checkData(dataJson).then((result)=>{
 		if(result){//when calling function
-	    	//TODO
-	    	//send first another tx to enable this one, with hash
-	    	    // web3.eth.sendSignedTransaction(dataJson.rawTx)
 		    web3.eth.personal.unlockAccount(constants.station1, "test",0).then(()=>{
 			console.log("commiting to close channel and closing it");
 			console.log("calling commitToClose() with: " +userAddress+", "+dataJson.tokenAmount+", "+dataJson.timestamp+", "+dataJson.dataHash);
@@ -129,7 +126,7 @@ net.createServer(function (socket) {
 }).listen(5000);
 
 // Put a friendly message on the terminal of the server.
-console.log("Chat server running at port 5000\n");
+console.log("Server running at port 5000\n");
 
 // http://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
 function sleep(ms) {
@@ -223,11 +220,11 @@ function waitTillCommitted(user,dataJson){
 	    console.log("result: "+result);
 	    if(result!=0){//correct
 	    	[r,s,v] = stateChannel.rsv_generate(dataJson.signature);
-	    	console.log("calling finishCharge() with: "+userAddress+","+v+", "+r+", "+s);
-	    	contract.methods.finishCharge(userAddress,v, r,s).send({from:constants.station1,gas: "4700000",gasPrice: "400000000000"}).on('transactionHash',
+	    	console.log("calling closeChannel() with: "+userAddress+","+v+", "+r+", "+s);
+	    	contract.methods.closeChannel(userAddress,v, r,s).send({from:constants.station1,gas: "4700000",gasPrice: "400000000000"}).on('transactionHash',
 	    											     function(transactionHash){
 	    	    											 // Transaction has entered to geth memory pool
-	    												 console.log("The finishCharge transaction is can be seen at http://rinkeby.etherscan.io/tx/" + transactionHash);}
+	    												 console.log("The closeChannel transaction is can be seen at http://rinkeby.etherscan.io/tx/" + transactionHash);}
 	    											    ).on('receipt', console.log).then(console.log);//
 	    }else{
 	    	console.log("waiting 30 seconds...");

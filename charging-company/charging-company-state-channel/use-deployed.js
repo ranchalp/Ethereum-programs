@@ -11,10 +11,10 @@ web3.setProvider(new web3.providers.HttpProvider('http://localhost:8545'));
 // Read the compiled contract code
 // Compile with
 // solc Contract.sol --combined-json abi,asm,ast,bin,bin-runtime,clone-bin,devdoc,interface,opcodes,srcmap,srcmap-runtime,userdoc > contracts.json
-let source = fs.readFileSync("chargingCompanyRawTx.json");
+let source = fs.readFileSync("chargingCompanyStateChannel.json");
 let contracts = JSON.parse(source)["contracts"];
 
-var chargingContract = 'chargingCompanyRawTx.sol:ChargingCompany';//chargingCompany.sol:ChargingCompany // chargingCompany.sol:Mortal
+var chargingContract = 'chargingCompanyStateChannel.sol:ChargingCompany';//chargingCompany.sol:ChargingCompany // chargingCompany.sol:Mortal
 // for (var contract1 in contracts) {
 //     console.log(contract1);}
 
