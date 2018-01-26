@@ -44,7 +44,6 @@ net.createServer(function (socket) {
 	console.log('json: ' + dataJson);
 	switch(dataJson.message) {
 	case constants.LOCKED_FUNDS:// fuelPrice
-	    hash = dataJson.txhash;
 	    // contract.once('channelOpened', {filter: {user: dataJson.address, station: constants.station1}},(error,event)=>{
 	    // 	console.log('ERROR: ');
 	    // 	console.log(error);
@@ -55,7 +54,17 @@ net.createServer(function (socket) {
 	    // 	   event.returnValues.user == dataJson.address &&
 	    // 	   event.returnValues.station == constants.station1
 	    // 	  ){
-	    //TODO FOR THE MOMENT WE ASSUME THIS WORKS AS EVENTS NOT SUPPORTED WITH WEB3.JS YET
+	    //TODO FOR THE MOMENT WE ASSUME THIS WORKS AS EVENTS NOT SUPPORTED WITH WEB3.JS YET            // can also be done with getChannelTimeout though:
+	    hash = dataJson.txhash;
+	    
+	    contract.methods.getChannelTimeout(dataJson.address,constants.station1,dataJson.tokenAmount).call({from:constants.station1}).then((result)=>{
+		console.log("result: "+result*1000);
+		date = new Date();
+		var check = date.getTime();
+		check += timestamp;
+		console.log("min timeout: "+check);
+		if(result*1000 >check){//correct
+	
 	    userAddress= dataJson.address;
 	    date = new Date();
 	    fundsLocked = date.getTime();
@@ -75,9 +84,12 @@ net.createServer(function (socket) {
 		//     console.log('error, hashes do not match');
 		// }
 		
-	    initiateTransfer();// simulation of fuel going to car
+		initiateTransfer();// simulation of fuel going to car
+		}else{
+		console.log("ERROR: channel is not open with proper timestamp");
+		}});
 	    // })
-            break;
+		;break;
 	case constants.OK:// fuelPrice
 	    checkData(dataJson).then((result)=>{
 		if(result)
